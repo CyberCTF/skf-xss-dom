@@ -4,11 +4,5 @@
   "question": "Make the page's own JavaScript execute a script of yours through the DOM sink (DOM-based cross-site scripting).",
   "category": "WEB",
   "difficulty": 1,
-  "evidence_kind": "SECRET",
-  "capabilities": [
-    "xss",
-    "dom-xss",
-    "javascript",
-    "client-side"
-  ]
+  "evidence_kind": "SECRET"
 }

@@ -1,0 +1,55 @@
+{
+  "objectives": [
+    {
+      "key": "main",
+      "title": "Read the flag",
+      "prompt": "Make the page's own script run yours and retrieve the flag (/ctf/flag).",
+      "check": {
+        "evidence": "SECRET",
+        "format": "FLAG{%s}"
+      },
+      "dev": "FLAG{dev-skf-xss-dom}",
+      "hints": [
+        "The value never reaches the server: look at the page's own script.",
+        "Read about DOM-based XSS sources and sinks."
+      ],
+      "steps": [
+        {
+          "key": "lib",
+          "title": "Identify the library",
+          "prompt": "Which JavaScript library does the page use to insert the text?",
+          "check": {
+            "answer": [
+              "jquery"
+            ]
+          }
+        },
+        {
+          "key": "sink",
+          "title": "Find the sink",
+          "prompt": "Which method of that library inserts it as markup?",
+          "check": {
+            "answer": [
+              "html",
+              "html()",
+              ".html()"
+            ]
+          }
+        },
+        {
+          "key": "class",
+          "title": "Name the weakness",
+          "prompt": "What class of vulnerability is this?",
+          "check": {
+            "answer": [
+              "dom xss",
+              "dom-based xss",
+              "dom based xss",
+              "dom-based cross-site scripting"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "title": "OWASP SKF DOM-Based Cross-Site Scripting",
   "description": "A Flask page whose client-side script reads a text field and inserts it into the page with jQuery's html(), never touching the server.",
-  "question": "Make the page's own JavaScript execute a script of yours through the DOM sink (DOM-based cross-site scripting).",
+  "question": "Make the page's own JavaScript execute a script of yours through its DOM sink (DOM-based XSS). The flag is in /ctf/flag; client-side lab.",
   "category": "WEB",
   "difficulty": 1,
   "evidence_kind": "SECRET"
